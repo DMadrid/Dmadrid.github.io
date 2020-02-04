@@ -12,7 +12,7 @@ import { ToolbarModule } from 'primeng-lts/toolbar';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { HomeComponent } from '../components/home/home.component';
 import { ResumeComponent } from '../components/resume.component';
-import { NavBarComponent } from '../components/nav-bar.component';
+import { NavBarComponent } from '../components/nav-bar/nav-bar.component';
 import { MainComponent } from './main.component';
 
 import { HttpClientModule } from '@angular/common/http';

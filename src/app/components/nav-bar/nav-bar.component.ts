@@ -10,7 +10,8 @@ import { MenuItem } from 'primeng-lts/api';
                 <a [routerLink]="link.routerLink">{{link.label}}</a>
             </ng-container>
         </nav>
-    `
+    `,
+    styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
     links: MenuItem[] = [
