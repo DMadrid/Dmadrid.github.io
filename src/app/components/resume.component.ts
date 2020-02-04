@@ -18,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
                 </div>
             </p-toolbar>
         </div>
-        <pdf-viewer src="../../../assets/documents/dan-madrid-resume.pdf" [render-text]='true' [zoom]='zoom' (after-load-complete)="pdfLoaded()"></pdf-viewer>
+        <pdf-viewer src="./assets/documents/dan-madrid-resume.pdf" [render-text]='true' [zoom]='zoom' (after-load-complete)="pdfLoaded()"></pdf-viewer>
     `
 })
 export class ResumeComponent implements OnInit {

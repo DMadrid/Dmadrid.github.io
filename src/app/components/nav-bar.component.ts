@@ -5,7 +5,7 @@ import { MenuItem } from 'primeng-lts/api';
     selector: 'nav-bar',
     template: `
         <nav class="navbar">
-            <img class="logo" src="../assets/images/dm-white.png">
+            <img class="logo" src="./assets/images/dm-white.png">
             <ng-container *ngFor="let link of links">
                 <a [routerLink]="link.routerLink">{{link.label}}</a>
             </ng-container>
