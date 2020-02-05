@@ -14,14 +14,16 @@ import { Component, OnInit } from '@angular/core';
                     </div>
                 </div>
                 <div class="ui-toolbar-group-right">
-                    <a pButton type="button" label="Download" icon="pi pi-download" download href='assets/documents/dan-madrid-resume.pdf'></a>
+                    <a pButton type="button" label="Download" icon="pi pi-download" download [href]="resumeRef"></a>
                 </div>
             </p-toolbar>
         </div>
-        <pdf-viewer src="/assets/documents/dan-madrid-resume.pdf" [render-text]='true' [zoom]='zoom' (after-load-complete)="pdfLoaded()"></pdf-viewer>
+        <pdf-viewer [src]="resumeRef" [render-text]='true' [zoom]='zoom' (after-load-complete)="pdfLoaded()"></pdf-viewer>
     `
 })
 export class ResumeComponent implements OnInit {
+    baseURL = window.location.origin;
+    resumeRef = this.baseURL + '/assets/documents/dan-madrid-resume.pdf';
     loading = true;
     zoom = 1;
 
