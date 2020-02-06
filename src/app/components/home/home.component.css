@@ -1,0 +1,10 @@
+#videvo {
+    opacity: .5;
+    background-color: black;
+    color: white;
+    width:fit-content;
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+}

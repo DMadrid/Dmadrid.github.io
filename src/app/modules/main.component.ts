@@ -5,7 +5,7 @@ import { RouterOutlet, Router } from '@angular/router';
 	selector: 'main',
 	template: `
 		<nav-bar></nav-bar>
-		<div style="margin-top: 50px;">
+		<div>
 			<router-outlet></router-outlet>
 		</div>
 	`

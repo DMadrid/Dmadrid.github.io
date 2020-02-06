@@ -15,10 +15,9 @@ import { MenuItem } from 'primeng-lts/api';
 })
 export class NavBarComponent implements OnInit {
     links: MenuItem[] = [
-        { label: 'Resume', routerLink: '/main/resume' },
-        { label: 'About', routerLink: '/main/about' },
-        { label: 'Bio', routerLink: '/main/bio' },
-        { label: 'Home', routerLink: '/main/home' },
+        { label: 'RESUME', routerLink: '/main/resume' },
+        { label: 'PROJECTS', routerLink: '/main/projects' },
+        { label: 'HOME', routerLink: '/main/home' },
     ]
     constructor() { }
 

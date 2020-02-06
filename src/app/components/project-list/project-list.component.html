@@ -1,0 +1,9 @@
+<div style="margin-top: 76px; margin-left: 20%; margin-right: 20%;">
+    <h1 style="color: white;">GitHub Projects</h1>
+    <ng-container *ngFor="let repo of repos">
+        <p-card [subheader]="repo.language">
+            <p-header>{{repo.name}}</p-header>
+            {{repo.description}}
+        </p-card>
+    </ng-container>
+</div>

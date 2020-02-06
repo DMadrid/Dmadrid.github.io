@@ -8,6 +8,7 @@ import { ButtonModule } from 'primeng-lts/button';
 import { SplitButtonModule } from 'primeng-lts/splitbutton';
 import { InputTextModule } from 'primeng-lts/inputtext';
 import { ToolbarModule } from 'primeng-lts/toolbar';
+import { CardModule } from 'primeng-lts/card';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { HomeComponent } from '../components/home/home.component';
@@ -16,6 +17,7 @@ import { NavBarComponent } from '../components/nav-bar/nav-bar.component';
 import { MainComponent } from './main.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectListComponent } from '../components/project-list/project-list.component';
 
 
 export const routes: Routes = [
@@ -30,6 +32,10 @@ export const routes: Routes = [
 			{
 				path: 'resume',
 				component: ResumeComponent
+			},
+			{
+				path: 'projects',
+				component: ProjectListComponent
 			}
 		]
 	}
@@ -46,13 +52,15 @@ export const routes: Routes = [
 		ToolbarModule,
 		HttpClientModule,
 		SplitButtonModule,
-		InputTextModule
+		InputTextModule,
+		CardModule
 	],
 	declarations: [
 		HomeComponent,
 		ResumeComponent,
 		NavBarComponent,
-		MainComponent
+		MainComponent,
+		ProjectListComponent
 	],
 	bootstrap: []
 })
