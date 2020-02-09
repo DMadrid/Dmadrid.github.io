@@ -4,7 +4,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'resume',
     template: `
-        <div style="margin-top: 76px;">
+        <p-progressSpinner *ngIf="loading" ></p-progressSpinner>
+        <div *ngIf="!loading" style="margin-top: 76px;">
             <div style="position: fixed; width: 100%; z-index: 2;">
                 <p-toolbar>
                     <div class="ui-toolbar-group-left">

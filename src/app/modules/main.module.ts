@@ -9,6 +9,7 @@ import { SplitButtonModule } from 'primeng-lts/splitbutton';
 import { InputTextModule } from 'primeng-lts/inputtext';
 import { ToolbarModule } from 'primeng-lts/toolbar';
 import { CardModule } from 'primeng-lts/card';
+import { ProgressSpinnerModule } from 'primeng-lts/progressspinner';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { HomeComponent } from '../components/home/home.component';
@@ -53,7 +54,8 @@ export const routes: Routes = [
 		HttpClientModule,
 		SplitButtonModule,
 		InputTextModule,
-		CardModule
+		CardModule,
+		ProgressSpinnerModule
 	],
 	declarations: [
 		HomeComponent,

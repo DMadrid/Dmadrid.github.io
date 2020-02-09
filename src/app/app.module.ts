@@ -9,8 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SplashComponent } from './components/splash.component';
-import { GitHubService } from './services/github.service';
-
 
 export const routes: Routes = [
 	{
@@ -37,9 +35,6 @@ export const routes: Routes = [
 	declarations: [
 		AppComponent,
 		SplashComponent,
-	],
-	providers: [
-		GitHubService
 	],
 	bootstrap: [AppComponent]
 })

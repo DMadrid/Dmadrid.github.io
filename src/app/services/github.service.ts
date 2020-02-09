@@ -1,23 +1,24 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { switchMap } from 'rxjs/operators'
 @Injectable({
     providedIn: 'root',
 })
-export class GitHubService {
+export class GitHubService implements OnInit {
     user = "dmadrid";
     api_list_url = 'https://api.github.com';
 
-
     api_list: any;
 
-
     constructor(private readonly _http: HttpClient) {
+        
+    }
+
+    ngOnInit(): void {
         this.getApiList$().subscribe(list => {
             this.api_list = list;
         });
     }
-
 
     /** Requests API list from GitHub */
     getApiList$() {
