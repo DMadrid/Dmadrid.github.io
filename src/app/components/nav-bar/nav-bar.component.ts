@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
             <img class="logo" src="./assets/images/dm-white.png">
             <ul>
                 <li *ngFor="let link of links">
-                    <a [routerLink]="link.routerLink">{{link.label}}</a>
+                    <a [href]="link.routerLink">{{link.label}}</a>
                 </li>
             </ul>
         </nav>

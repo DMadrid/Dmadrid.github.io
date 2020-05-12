@@ -1,22 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { slider } from '../assets/animations/animations';
 
 @Component({
 	selector: 'app-root',
 	template: `
-		<main>
-			<router-outlet #outlet="outlet"></router-outlet>
-		</main>
-	`,
-	animations: [
-		slider
-	]
+		<nav-bar></nav-bar>
+		<intro></intro>
+		<div style="margin-left: 10%; margin-right: 10%;">
+			<project-list></project-list>
+		</div>
+	`
 })
 export class AppComponent {
-	constructor() { }
-
-	prepareRoute(outlet: RouterOutlet) {
-		return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
-	}
+	constructor() {}
 }
