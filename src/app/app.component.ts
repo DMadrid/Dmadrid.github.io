@@ -5,9 +5,8 @@ import { Component } from '@angular/core';
 	template: `
 		<nav-bar></nav-bar>
 		<intro></intro>
-		<div style="margin-left: 10%; margin-right: 10%;">
-			<project-list></project-list>
-		</div>
+		<project-list></project-list>
+		<resume></resume>
 	`
 })
 export class AppComponent {

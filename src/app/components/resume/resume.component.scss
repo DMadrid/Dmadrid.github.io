@@ -1,0 +1,29 @@
+@import "../../../scss/variables";
+
+#resume {
+    height: 90vh;
+    padding-top: 10vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    height: 90vh;
+    width: 97px;
+    float: left;
+}
+
+button {
+    background-color: $white;
+    color: $black;
+    border-radius: 2px;
+    border: 0px;
+    width: 51px;
+    height: 51px;
+    margin: 11px;
+    margin-left: 23px;
+    margin-right: 23px;
+}
+
+button:hover {
+    background-color: $yellow;
+}

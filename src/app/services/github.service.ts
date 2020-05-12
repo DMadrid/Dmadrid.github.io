@@ -1,7 +1,7 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { switchMap, mergeMap } from 'rxjs/operators'
-import { Observable, of, merge } from 'rxjs';
+import { switchMap, mergeMap, map } from 'rxjs/operators'
+import { Observable, of } from 'rxjs';
 @Injectable({
     providedIn: 'root',
 })
@@ -16,6 +16,7 @@ export class GitHubService {
         return this._http.get(url)
     }
 
+    /** Get request url */
     getUrl$(key: string): Observable<any> {
         if (this.api_list !== undefined && this.api_list[key]) {
             return of(this.api_list[key]);
@@ -37,12 +38,14 @@ export class GitHubService {
         const key = 'repos_url';
         return this.getUser$(user).pipe(
             switchMap(list => {
+                console.log('githup api list', list)
                 let repos_url = list[key] as string;
                 return this._http.get(repos_url);
             })
         )
     }
 
+    /** Get User api calls */
     getUser$(user: string): Observable<any> {
         return this.getUrl$('user_url').pipe(mergeMap(url => {
             const final_url = this.setPathParam(url, 'user', user)
@@ -50,14 +53,11 @@ export class GitHubService {
         }))
     }
 
-    /** Avatar API request */
-    getAvatar$(user: string): Observable<any> {
+    /** Get avatar url */
+    getAvatar$(user: string): Observable<string> {
         const key = 'avatar_url';
         return this.getUser$(user).pipe(
-            switchMap(list => {
-                let avatar_url = list[key] as string;
-                return this._http.get(avatar_url);
-            })
+            map(list => list[key] as string)
         )
     }
 }

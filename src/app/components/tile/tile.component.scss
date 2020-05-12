@@ -1,12 +1,27 @@
 @import "../../../scss/variables";
 
 div {
+    color: $white;
     border: $white solid 3px;
     border-radius: 20px;
     margin: 20px;
     padding: 40px;
 }
 
+div:hover {
+    color: $yellow;
+    border: $yellow solid 3px;
+}
+
 h2 {
+    color: inherit;
     margin: 0px;
+}
+
+p {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
 }
