@@ -5,8 +5,9 @@ import { RouterOutlet, Router } from '@angular/router';
 	selector: 'main',
 	template: `
 		<nav-bar></nav-bar>
-		<div>
-			<router-outlet></router-outlet>
+		<intro></intro>
+		<div style="margin-left: 10%; margin-right: 10%;">
+			<project-list></project-list>
 		</div>
 	`
 })

@@ -9,6 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SplashComponent } from './components/splash.component';
+import { MainComponent } from './modules/main.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { IntroComponent } from './components/intro/intro.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
+import { TileComponent } from './components/tile/tile.component';
 
 export const routes: Routes = [
 	{
@@ -18,7 +23,7 @@ export const routes: Routes = [
 	},
 	{
 		path: 'main',
-		loadChildren: () => import('./modules/main.module').then(m => m.MainModule),
+		component: MainComponent,
 		data: {animation: 'main'}
 	}
 ]
@@ -35,6 +40,11 @@ export const routes: Routes = [
 	declarations: [
 		AppComponent,
 		SplashComponent,
+		MainComponent,
+		NavBarComponent,
+		IntroComponent,
+		ProjectListComponent,
+		TileComponent
 	],
 	bootstrap: [AppComponent]
 })

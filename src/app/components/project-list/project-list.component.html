@@ -1,9 +1,8 @@
-<div style="margin-top: 76px; margin-left: 20%; margin-right: 20%;">
+<div>
     <h1 style="color: white;">GitHub Projects</h1>
+    <tile header='CyFHIR' body='' link=''></tile>
     <ng-container *ngFor="let repo of repos">
-        <p-card [subheader]="repo.language">
-            <p-header>{{repo.name}}</p-header>
-            {{repo.description}}
-        </p-card>
+        <tile [header]='repo.name' [body]='repo.description' [link]='repo.html_url'></tile>
+        <!-- repo.language -->
     </ng-container>
 </div>

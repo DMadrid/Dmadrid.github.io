@@ -24,10 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng-lts/resources/themes/luna-amber/theme.css",
-              "node_modules/primeng-lts/resources/primeng.min.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -92,7 +89,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -123,6 +120,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "gh-page"
+    }
+  },
+  "defaultProject": "gh-page",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

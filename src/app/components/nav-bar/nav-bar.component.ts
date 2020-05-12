@@ -6,12 +6,14 @@ import { MenuItem } from 'primeng-lts/api';
     template: `
         <nav class="navbar">
             <img class="logo" src="./assets/images/dm-white.png">
-            <ng-container *ngFor="let link of links">
-                <a [routerLink]="link.routerLink">{{link.label}}</a>
-            </ng-container>
+            <ul>
+                <li *ngFor="let link of links">
+                    <a [routerLink]="link.routerLink">{{link.label}}</a>
+                </li>
+            </ul>
         </nav>
     `,
-    styleUrls: ['./nav-bar.component.css']
+    styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
     links: MenuItem[] = [

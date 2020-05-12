@@ -12,13 +12,14 @@ import { CardModule } from 'primeng-lts/card';
 import { ProgressSpinnerModule } from 'primeng-lts/progressspinner';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
-import { HomeComponent } from '../components/home/home.component';
+import { IntroComponent } from '../components/intro/intro.component';
 import { ResumeComponent } from '../components/resume.component';
 import { NavBarComponent } from '../components/nav-bar/nav-bar.component';
 import { MainComponent } from './main.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectListComponent } from '../components/project-list/project-list.component';
+import { TileComponent } from '../components/tile/tile.component';
 
 
 export const routes: Routes = [
@@ -28,7 +29,7 @@ export const routes: Routes = [
 		children: [
 			{
 				path: 'home',
-				component: HomeComponent
+				component: IntroComponent
 			},
 			{
 				path: 'resume',
@@ -58,11 +59,12 @@ export const routes: Routes = [
 		ProgressSpinnerModule
 	],
 	declarations: [
-		HomeComponent,
+		IntroComponent,
 		ResumeComponent,
 		NavBarComponent,
 		MainComponent,
-		ProjectListComponent
+		ProjectListComponent,
+		TileComponent
 	],
 	bootstrap: []
 })
