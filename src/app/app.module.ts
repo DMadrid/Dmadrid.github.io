@@ -12,6 +12,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { TileComponent } from './components/tile/tile.component';
+import { ResumeComponent } from './components/resume.component';
 
 export const routes: Routes = [
 	{
@@ -35,7 +36,8 @@ export const routes: Routes = [
 		NavBarComponent,
 		IntroComponent,
 		ProjectListComponent,
-		TileComponent
+		TileComponent,
+		ResumeComponent
 	],
 	bootstrap: [AppComponent]
 })
