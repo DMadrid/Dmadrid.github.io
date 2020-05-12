@@ -5,7 +5,7 @@ import { slider } from '../assets/animations/animations';
 @Component({
 	selector: 'app-root',
 	template: `
-		<main [@routeAnimations]="prepareRoute(outlet)">
+		<main>
 			<router-outlet #outlet="outlet"></router-outlet>
 		</main>
 	`,

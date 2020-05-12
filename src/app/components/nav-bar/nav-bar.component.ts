@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng-lts/api';
 
 @Component({
     selector: 'nav-bar',
@@ -16,7 +15,7 @@ import { MenuItem } from 'primeng-lts/api';
     styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-    links: MenuItem[] = [
+    links = [
         { label: 'RESUME', routerLink: '/main/resume' },
         { label: 'PROJECTS', routerLink: '/main/projects' },
         { label: 'HOME', routerLink: '/main/home' },
