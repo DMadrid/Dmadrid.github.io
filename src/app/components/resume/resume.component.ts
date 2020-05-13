@@ -26,7 +26,7 @@ export class ResumeComponent {
         }
     }
 
-    print() {}
+    download() {}
 
     pdfLoaded() {
         this.loading = false
