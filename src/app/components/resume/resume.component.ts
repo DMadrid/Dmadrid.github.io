@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ResumeComponent {
     baseURL = window.location.origin;
-    resumeRef = this.baseURL + '/assets/documents/dan-madrid-resume.pdf';
+    resumeRef = './assets/documents/dan-madrid-resume.pdf';
     loading = true;
     zoom = 1;
 
