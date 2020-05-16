@@ -1,13 +1,13 @@
 <div id='resume'>
     <div class='sidebar'>
         <button (click)='increment()'>
-            <img src="../../../assets/fa/search-plus.svg" alt="zoom in">
+            <img src="./assets/fa/search-plus.svg" alt="zoom in">
         </button>
         <button (click)='decrement()'>
-            <img src="../../../assets/fa/search-minus.svg" alt="zoom out">
+            <img src="./assets/fa/search-minus.svg" alt="zoom out">
         </button>
         <button (click)='download()'>
-            <img src="../../../assets/fa/download.svg" alt="download">
+            <img src="./assets/fa/download.svg" alt="download">
         </button>
     </div>
     <pdf-viewer [src]="resumeRef" [render-text]='true' [zoom]='zoom' (after-load-complete)="pdfLoaded()"></pdf-viewer>
