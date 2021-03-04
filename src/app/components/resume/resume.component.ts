@@ -15,9 +15,7 @@ export class ResumeComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
-        if (this.isDesktop) {
-            this.zoom = 1
-        }
+        this.setIsDesktop()
     }
 
     @HostListener('window:resize', ['$event'])
@@ -27,6 +25,9 @@ export class ResumeComponent implements OnInit {
 
     setIsDesktop(): void {
         this.isDesktop = window.innerWidth > 1000
+        if (this.isDesktop) {
+            this.zoom = 1
+        }
     }
 
     increment(): void {
