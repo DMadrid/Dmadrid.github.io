@@ -17,3 +17,29 @@ img {
     float: right;
     border-radius: 30px;
 }
+
+@media (max-width: 1000px) {
+    div {
+        margin-left: 0;
+        margin-right: 0;
+        height: fit-content;
+    }
+
+    h1 {
+        display: inline-block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    img {
+        display: inline-block;
+        margin-left: auto;
+        width: 50vw;
+        height: 50vw;
+        margin-left: 25vw;
+        margin-right: 25vw;
+        border-radius: 50vw;
+    }
+}

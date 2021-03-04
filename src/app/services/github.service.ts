@@ -5,6 +5,8 @@ import { Observable, of } from 'rxjs';
 @Injectable({
     providedIn: 'root',
 })
+
+// TODO: use session storage to cache data
 export class GitHubService {
     api_list: any;
 
@@ -38,7 +40,6 @@ export class GitHubService {
         const key = 'repos_url';
         return this.getUser$(user).pipe(
             switchMap(list => {
-                console.log('githup api list', list)
                 let repos_url = list[key] as string;
                 return this._http.get(repos_url);
             })

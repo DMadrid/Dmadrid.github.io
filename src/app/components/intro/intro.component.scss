@@ -1,3 +1,5 @@
+@import "../../../scss/variables";
+
 h1 {
     font-size: 8vw;
     font-weight: bold;
@@ -8,12 +10,12 @@ h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    text-shadow: 0px 0px 10px black;
+    text-shadow: 0px 0px 10px $black;
 }
 
 #videvo {
     opacity: .8;
-    background-color: black;
+    background-color: $black;
     width: 100%;
     z-index: 2;
     width: fit-content;
@@ -21,3 +23,12 @@ h1 {
     bottom: 0;
     padding: 10px;
 }
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 14vw;
+        width: 100vw;
+        overflow-wrap: break-word;
+    }
+}
+

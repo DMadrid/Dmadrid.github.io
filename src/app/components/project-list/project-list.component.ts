@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 import { GitHubService } from 'src/app/services/github.service';
 
 @Component({
@@ -16,6 +17,7 @@ export class ProjectListComponent implements OnInit {
 
     ngOnInit(): void {
         this._gitHub.getRepos$(this.default_user).subscribe((repos: any[]) => {
+            sessionStorage.setItem("repositories", JSON.stringify(repos))
             this.loading = false;
             this.repos = repos;
         });
