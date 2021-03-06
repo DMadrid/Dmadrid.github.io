@@ -5,4 +5,14 @@ import { Component } from '@angular/core';
     templateUrl: './intro.component.html',
     styleUrls: ['./intro.component.scss']
 })
-export class IntroComponent {}
+export class IntroComponent {
+
+    constructor() {
+        this.resizeViewHeight()
+    }
+
+    private resizeViewHeight(): void {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+}
