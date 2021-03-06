@@ -11,7 +11,7 @@ div {
 
 div:hover {
     color: $yellow;
-    border: $yellow solid 3px;
+    border: $yellow solid -3px;
 }
 
 h2 {
@@ -30,7 +30,7 @@ a {
 @media (max-width: 1000px) {
     div {
         display: inline-block;
-        width: 80%;
+        width: -webkit-fill-available;
         margin-left: 0;
         margin-right: 0;
         align-items: center;

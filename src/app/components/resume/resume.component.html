@@ -1,4 +1,4 @@
-<div id='resume'>
+<section id='resume'>
     <div class='sidebar' *ngIf="isDesktop">
         <button (click)='increment()'>
             <img src="./assets/fa/search-plus.svg" alt="zoom in">
@@ -11,4 +11,4 @@
         </button>
     </div>
     <pdf-viewer [src]="resumeRef" [render-text]='true' [zoom]='zoom' (after-load-complete)="pdfLoaded()" [original-size]="false" style="display:block; height: fit-content"></pdf-viewer>
-</div>
+</section>

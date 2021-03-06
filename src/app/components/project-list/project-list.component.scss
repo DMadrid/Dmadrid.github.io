@@ -1,4 +1,4 @@
-div {
+section {
     height: 90vh;
     padding-top: 10vh;
     margin-left: 20vw;
@@ -19,15 +19,15 @@ img {
 }
 
 @media (max-width: 1000px) {
-    div {
-        margin-left: 10vw;
-        margin-right: 10vw;
+    section {
+        margin-left: 10%;
+        margin-right: 10%;
         height: fit-content;
     }
 
     h1 {
         display: inline-block;
-        width: 80vw;
+        width: 100%;
         margin-left: 0px;
         margin-right: 0px;
         text-align: center;
@@ -35,10 +35,10 @@ img {
 
     img {
         display: inline-block;
-        width: 50vw;
-        height: 50vw;
-        margin-left: 15vw;
-        margin-right: 15vw;
-        border-radius: 50vw;
+        width: 50%;
+        height: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 50%;
     }
 }
