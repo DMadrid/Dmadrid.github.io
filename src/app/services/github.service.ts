@@ -50,16 +50,16 @@ export class GitHubService {
         )
     }
 
-    /** Set path parameter in url */
-    private setPathParam(url: string, key: string, val: string): string {
-        return url.replace(`{${key}}`, val);
-    }
-
     /** Get User api calls */
     private getUser$(user: string): Observable<any> {
         return this.getUrl$('user_url').pipe(mergeMap(url => {
             const final_url = this.setPathParam(url, 'user', user)
             return this._http.get(final_url);
         }))
+    }
+
+    /** Set path parameter in url */
+    private setPathParam(url: string, key: string, val: string): string {
+        return url.replace(`{${key}}`, val);
     }
 }
