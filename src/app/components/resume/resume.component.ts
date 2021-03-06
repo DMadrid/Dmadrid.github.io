@@ -26,7 +26,7 @@ export class ResumeComponent implements OnInit {
     setIsDesktop(): void {
         this.isDesktop = window.innerWidth > 1000
         if (this.isDesktop) {
-            this.zoom = 1
+            this.zoom = .5
         }
     }
 

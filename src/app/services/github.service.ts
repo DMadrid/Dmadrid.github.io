@@ -25,10 +25,10 @@ export class GitHubService {
     }
 
     /** Get request url */
-    getUrl$(key: string): Observable<any> {
-        return this.getApiList$().pipe(mergeMap(list => {
-            return of(list[key]);
-        }))
+    getUrl$(key: string): Observable<string> {
+        return this.getApiList$().pipe(
+            map(list => list[key] as string)
+        )
     }
 
     /** Set path parameter in url */
