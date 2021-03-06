@@ -13,6 +13,11 @@ h1 {
     text-shadow: 0px 0px 10px $black;
 }
 
+video {
+    height: 100vh;
+    z-index: -1;
+}
+
 #videvo {
     opacity: .8;
     background-color: $black;
