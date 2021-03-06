@@ -10,13 +10,13 @@ import { GitHubService } from 'src/app/services/github.service';
 export class ProjectListComponent implements OnInit {
     loading = true;
     default_user = "dmadrid";
-    user_avatar = this._gitHub.getAvatar$(this.default_user)
+    user_avatar = this._gitHub.GetAvatar$(this.default_user)
     repos: any[];
 
     constructor(private readonly _gitHub: GitHubService) {}
 
     ngOnInit(): void {
-        this._gitHub.getRepos$(this.default_user).subscribe((repos: any[]) => {
+        this._gitHub.GetRepos$(this.default_user).subscribe((repos: any[]) => {
             sessionStorage.setItem("repositories", JSON.stringify(repos))
             this.loading = false;
             this.repos = repos;
