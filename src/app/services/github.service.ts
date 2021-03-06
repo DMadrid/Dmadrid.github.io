@@ -2,32 +2,33 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { switchMap, mergeMap, map } from 'rxjs/operators'
 import { Observable, of } from 'rxjs';
+
 @Injectable({
     providedIn: 'root',
 })
-
-// TODO: use session storage to cache data
 export class GitHubService {
-    api_list: any;
-
     constructor(private readonly _http: HttpClient) {}
 
     /** Requests API list from GitHub */
     getApiList$(): Observable<any> {
-        const url = 'https://api.github.com';
-        return this._http.get(url)
+        const cachedList = sessionStorage.getItem('api_list')
+        if (cachedList == null) {
+            const url = 'https://api.github.com';
+            return this._http.get(url).pipe(map(list => {
+                const stringedList = JSON.stringify(list)
+                sessionStorage.setItem('api_list', stringedList)
+                return list
+            }))
+        }
+        const parsedList = JSON.parse(cachedList)
+        return of(parsedList)
     }
 
     /** Get request url */
     getUrl$(key: string): Observable<any> {
-        if (this.api_list !== undefined && this.api_list[key]) {
-            return of(this.api_list[key]);
-        } else {
-            return this.getApiList$().pipe(mergeMap(list => {
-                this.api_list = list;
-                return of(list[key]);
-            }))
-        }
+        return this.getApiList$().pipe(mergeMap(list => {
+            return of(list[key]);
+        }))
     }
 
     /** Set path parameter in url */
@@ -40,7 +41,7 @@ export class GitHubService {
         const key = 'repos_url';
         return this.getUser$(user).pipe(
             switchMap(list => {
-                let repos_url = list[key] as string;
+                const repos_url = list[key] as string;
                 return this._http.get(repos_url);
             })
         )
